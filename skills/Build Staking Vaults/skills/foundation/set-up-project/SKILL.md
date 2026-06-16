@@ -1,16 +1,6 @@
-﻿---
+---
 name: set-up-project
 description: "Set up a Solidity smart contract project with OpenZeppelin Contracts. Use when users need to: (1) create a new Hardhat project, (2) install OpenZeppelin Contracts dependencies for Solidity, or (3) understand Solidity import conventions for OpenZeppelin."
-license: MIT
-metadata:
-  author: OpenZeppelin
-  domain: solidity
-  category: setup
-  frameworks:
-    - hardhat
-  languages:
-    - solidity
-    - typescript
 ---
 
 # Solidity Setup
