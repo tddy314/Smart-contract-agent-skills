@@ -128,7 +128,10 @@ Check explicitly for:
 - principal/reward/fee commingling in balances;
 - incorrect coin / balance split-join-transfer flow;
 - stale accumulator, checkpoint, rate, or debt updates;
+- stale oracle, confidence, epoch, exchange-rate, or reserve refresh assumptions;
 - shared-object entry points that rely on invalid state assumptions;
+- dynamic fields that can be orphaned, mixed across parent objects, or accessed without existence checks;
+- hot-potato / receipt objects that can be dropped, copied, replayed, or settled against the wrong object;
 - missing cleanup / return paths for borrowed or shared test objects;
 - assumptions about who can hold, move, or wrap the governing object.
 

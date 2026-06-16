@@ -12,7 +12,7 @@ description: >
 
 This is the base skill for all smart contract tasks. It defines how the agent should work before coding, while coding, and after finishing.
 
-Other skills (`pre-coding-plan`, `threat-model`, chain-specific skills) are loaded alongside this one. This skill owns the workflow. The others provide checklists at the right moments.
+Other skills (`pre-coding-plan`, `threat-model`, chain-specific skills) are loaded alongside this one. This skill owns the workflow. The others provide checklists at the right moments. For Sui repos, load `sui-move` and then the relevant protocol-shape skill (`sui-defi-math`, `sui-lending`, `sui-staking`, or `sui-vault`) when the task touches that domain.
 
 ---
 
@@ -96,6 +96,8 @@ Apply the branch that matches the repo:
   - keep principal, rewards, fees, and other balances economically separated unless commingling is explicitly intended
   - update checkpointed accounting before mutating rates, debts, totals, or balances when the design depends on elapsed time
   - treat multi-transaction object evolution as core behavior, not a secondary concern
+  - for lending, staking, or vault work, refresh oracle/exchange-rate/accrual state before value-moving mutations
+  - for wrappers or flash-style flows, bind hot-potato receipts to the exact object/action they must settle
 
 ### Step 6: Test
 

@@ -266,6 +266,9 @@ Useful patterns from Sui docs:
 
 - `#[test]` for unit tests
 - `#[expected_failure(...)]` when abort behavior is the thing under test
+- descriptive test names without a redundant `test_` prefix in `_tests` modules
+- `assert_eq!` for value comparisons so failures show both sides
+- `#[test, expected_failure(abort_code = ..., location = module)]` on one line when the abort originates outside the test module
 - `tx_context::dummy()` for simple single-transaction tests
 - `test_scenario` for multi-transaction or multi-sender flows
 - explicit object cleanup or return-to-sender when tests create owned objects
@@ -275,6 +278,7 @@ Useful patterns from Sui docs:
 - system object creation helpers when tests need `Clock`, `Random`, `DenyList`, or other test-only framework objects
 - scenario tests for multi-transaction and multi-sender ownership flows
 - capability-pattern tests that prove only the holder can exercise the protected path
+- no cleanup after an expected-failure abort; let the test abort naturally
 
 Useful commands:
 
@@ -292,6 +296,8 @@ What to check:
 - object is transferred/shared/frozen as intended;
 - coin and balance sources match the intended economic meaning;
 - same-checkpoint and cross-checkpoint accounting behave as intended;
+- stale oracle/confidence and stale exchange-rate cases fail safely;
+- hot-potato receipts cannot be dropped, replayed, or settled against the wrong object;
 - multi-step scenario still preserves expected ownership and state;
 - transaction effects match what the step was supposed to create, share, or transfer.
 

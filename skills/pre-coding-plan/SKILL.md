@@ -126,6 +126,15 @@ Coin / balance movement:
 
 Reward / accounting checkpoints:
 - <What must be updated before mutating rates, totals, debts, or balances, or "None">
+
+Object lifecycle:
+- <Which objects are created, shared, transferred, wrapped, frozen, deleted, or stored as dynamic fields>
+
+Oracle / refresh dependencies:
+- <Which prices, exchange rates, epochs, indexes, or accumulators must be fresh before the action, or "None">
+
+Receipt / hot-potato path:
+- <Any receipt object that must be returned/consumed in the same PTB, or "None">
 ```
 
 ### Termination
