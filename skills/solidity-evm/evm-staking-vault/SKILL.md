@@ -1,5 +1,5 @@
 ---
-name: build-staking-vaults
+name: evm-staking-vault
 description: Use when planning or implementing staking and yield vault systems in Solidity, including Hardhat project setup, shared router architecture, protocol-specific ERC-4626 vaults, withdrawal capability design, reward harvesting, fee policy, and invariant-driven testing.
 ---
 
@@ -10,9 +10,9 @@ Use this skill as the package overview when the task is to build or extend staki
 This package is split into focused skills:
 
 - For Hardhat and OpenZeppelin project scaffolding:
-  Read [skills/foundation/set-up-project/SKILL.md](skills/foundation/set-up-project/SKILL.md)
+  Read [references/project-setup.md](references/project-setup.md)
 - For staking vault architecture, router design, ERC-4626 vault boundaries, rewards, fees, and invariants:
-  Read [skills/core/staking-vault-architecture/SKILL.md](skills/core/staking-vault-architecture/SKILL.md)
+  Read [references/architecture.md](references/architecture.md)
 
 Use this top-level overview when the user request is broad and you need to decide whether the work is mainly:
 

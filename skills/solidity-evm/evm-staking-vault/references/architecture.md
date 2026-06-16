@@ -1,8 +1,3 @@
----
-name: staking-vault-architecture
-description: Use when designing or implementing staking vault architecture in Solidity, including shared vault routers, protocol-specific ERC-4626 vaults, multi-protocol yield integrations, instant and async withdrawals, reward harvesting, fee policy, and security invariants.
----
-
 # Staking Vault Architecture
 
 Use this skill before writing staking vault contracts or materially changing storage, accounting, privilege boundaries, routing, fees, rewards, or asset-flow behavior.
@@ -106,15 +101,15 @@ Use a common protocol vault interface and a shared base template only where beha
 Keep `SKILL.md` as the overview. Read the detailed references only when the task needs them.
 
 - For router responsibilities, registry state, protocol vault boundaries, and base vault guidance:
-  See [references/router-and-vaults.md](references/router-and-vaults.md)
+  See [architecture-router-and-vaults.md](architecture-router-and-vaults.md)
 - For instant and async withdrawal capability design and protocol flows:
-  See [references/withdrawal-model.md](references/withdrawal-model.md)
+  See [architecture-withdrawal-model.md](architecture-withdrawal-model.md)
 - For share-price accounting, external reward handling, and fee policy:
-  See [references/rewards-and-fees.md](references/rewards-and-fees.md)
+  See [architecture-rewards-and-fees.md](architecture-rewards-and-fees.md)
 - For invariants, trust boundaries, and the minimum test plan:
-  See [references/security-and-testing.md](references/security-and-testing.md)
+  See [architecture-security-and-testing.md](architecture-security-and-testing.md)
 - For contract test strategy and A/B evaluation of skill-vs-no-skill performance:
-  See [references/skill-evaluation.md](references/skill-evaluation.md)
+  See [architecture-skill-evaluation.md](architecture-skill-evaluation.md)
 
 ## Contract Layout
 

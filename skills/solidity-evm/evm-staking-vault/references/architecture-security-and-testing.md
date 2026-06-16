@@ -4,7 +4,7 @@
 
 Read this file when implementing invariants, trust boundaries, or tests for vault routing, share accounting, rewards, and fee safety.
 
-For a fuller evaluation workflow, including agent A/B testing with and without this skill, also read [skill-evaluation.md](skill-evaluation.md).
+For a fuller evaluation workflow, including agent A/B testing with and without this skill, also read [architecture-skill-evaluation.md](architecture-skill-evaluation.md).
 
 ## Security Invariants
 
