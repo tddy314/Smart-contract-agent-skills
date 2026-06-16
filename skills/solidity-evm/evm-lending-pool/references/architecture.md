@@ -1,8 +1,3 @@
----
-name: lending-pool-architecture
-description: Use when designing or implementing Solidity lending pool systems with a single core LendingPool contract, multi-collateral deposits, multi-token borrowing, liquidity suppliers, pool-share yield, Chainlink oracle pricing, borrow power checks, variable rate curves, repayment, liquidation, protocol fees, admin controls, and security invariants.
----
-
 # Lending Pool Architecture
 
 Use this skill before writing lending pool contracts or materially changing collateral accounting, borrow accounting, liquidity supplier accounting, oracle pricing, interest accrual, rate curves, liquidation, fees, admin controls, or asset-flow behavior.
@@ -143,32 +138,32 @@ Rules that should stay true across implementations:
 
 ## Read References And Rules
 
-Keep `SKILL.md` as the overview. Read the detailed `references/` files for architecture details and the `rules/` files for implementation guardrails.
+Keep `SKILL.md` as the overview. Read the detailed reference files for architecture details and the rules files for implementation guardrails.
 
 - For reserve state, scaled debt, supplier share accounting, and collateral-to-liquidity movement:
-  See [references/accounting.md](references/accounting.md)
+  See [architecture-accounting.md](architecture-accounting.md)
   For implementation checks on the same area:
-  See [rules/accounting-rules.md](rules/accounting-rules.md)
+  See [architecture-accounting-rules.md](architecture-accounting-rules.md)
 - For oracle normalization, borrow power math, collateral config, and price validation:
-  See [references/oracle-and-pricing.md](references/oracle-and-pricing.md)
+  See [architecture-oracle-and-pricing.md](architecture-oracle-and-pricing.md)
   For implementation checks on the same area:
-  See [rules/oracle-and-pricing-rules.md](rules/oracle-and-pricing-rules.md)
+  See [architecture-oracle-and-pricing-rules.md](architecture-oracle-and-pricing-rules.md)
 - For utilization, borrow rate curve, accrual timing, reserve factor, and protocol reserves:
-  See [references/interest-rate-model.md](references/interest-rate-model.md)
+  See [architecture-interest-rate-model.md](architecture-interest-rate-model.md)
   For implementation checks on the same area:
-  See [rules/interest-rate-rules.md](rules/interest-rate-rules.md)
+  See [architecture-interest-rate-rules.md](architecture-interest-rate-rules.md)
 - For detailed external function requirements and admin control requirements:
-  See [references/function-spec.md](references/function-spec.md)
+  See [architecture-function-spec.md](architecture-function-spec.md)
   For implementation checks on the same area:
-  See [rules/function-rules.md](rules/function-rules.md)
+  See [architecture-function-rules.md](architecture-function-rules.md)
 - For liquidation conditions, seize math, and close-factor considerations:
-  See [references/liquidation.md](references/liquidation.md)
+  See [architecture-liquidation.md](architecture-liquidation.md)
   For implementation checks on the same area:
-  See [rules/liquidation-rules.md](rules/liquidation-rules.md)
+  See [architecture-liquidation-rules.md](architecture-liquidation-rules.md)
 - For invariant-driven testing expectations:
-  See [references/test-plan.md](references/test-plan.md)
+  See [architecture-test-plan.md](architecture-test-plan.md)
   For system-wide implementation security checks:
-  See [rules/security-checks.md](rules/security-checks.md)
+  See [architecture-security-checks.md](architecture-security-checks.md)
 
 ## Contract Layout
 
