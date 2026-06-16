@@ -99,6 +99,118 @@
           "description": "Agent produces a final condensed report."
         }
       ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're modifying a Sui lending reserve in sources/reserve.move. Add a borrow cap check and make sure stale oracle prices can't be used for new borrows.",
+      "expected_output": "Agent loads Sui Move plus lending/math guidance, inspects Move.toml/sources/tests, proposes a plan covering reserve refresh, oracle staleness/confidence, borrow cap invariants, capability/object flow, asks for confirmation before coding, and reports tests.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "loads_sui_lending_context",
+          "type": "qualitative",
+          "description": "Agent recognizes Sui lending from reserve/oracle/borrow terms and applies Sui object/capability plus lending-specific refresh/oracle rules."
+        },
+        {
+          "name": "plans_refresh_before_act",
+          "type": "qualitative",
+          "description": "Plan explicitly refreshes oracle/reserve/accrual state before enforcing the cap or mutating borrow state."
+        },
+        {
+          "name": "covers_oracle_safety",
+          "type": "qualitative",
+          "description": "Threat model or plan includes stale price, confidence, wrong feed, and failure behavior."
+        },
+        {
+          "name": "maps_sui_object_cap_coin_flow",
+          "type": "qualitative",
+          "description": "Agent maps Sui objects, capabilities, and Coin/Balance movement before proposing code changes."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "In our Sui liquid staking package, redeem sometimes uses the previous epoch exchange rate. Fix the flow around validator refresh and LST burn/redeem.",
+      "expected_output": "Agent applies Sui staking/math guidance, maps Storage/StakePool/ValidatorPool/TreasuryCap flow, plans epoch refresh before redeem, addresses mint/redeem rounding and inactive-validator migration, asks for code gate, and runs sui move tests if present.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "loads_sui_staking_context",
+          "type": "qualitative",
+          "description": "Agent recognizes liquid staking and applies epoch refresh, exchange-rate, TreasuryCap, and redeem lifecycle guidance."
+        },
+        {
+          "name": "maps_treasurycap_and_redeem",
+          "type": "qualitative",
+          "description": "Plan traces LST burn/mint authority and redeem object/balance flow."
+        },
+        {
+          "name": "tests_epoch_edges",
+          "type": "qualitative",
+          "description": "Test plan covers stale previous epoch, refresh idempotence, and rounding/zero edge cases."
+        },
+        {
+          "name": "maps_sui_object_cap_coin_flow",
+          "type": "qualitative",
+          "description": "Agent maps Storage/StakePool/ValidatorPool objects, caps, and SUI/LST Coin/Balance flow."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Review this Sui strategy wrapper change: the relayer borrows a wrapped cap and returns it with a receipt after rebalancing. I want to know what can go wrong before we code.",
+      "expected_output": "Agent applies Sui vault/wrapper guidance, focuses on hot-potato receipt binding, relayer/admin authority boundaries, strategy target constraints, stale value/share accounting, and returns a neutral design analysis before implementation.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "loads_sui_vault_context",
+          "type": "qualitative",
+          "description": "Agent recognizes strategy wrapper/relayer/receipt terms and applies Sui vault/wrapper guidance."
+        },
+        {
+          "name": "analyzes_receipt_binding",
+          "type": "qualitative",
+          "description": "Analysis covers wrong wrapper, wrong sender, wrong cap/object, double borrow, replay/drop/copy/store risks."
+        },
+        {
+          "name": "separates_authorities",
+          "type": "qualitative",
+          "description": "Analysis separates admin, operator/relayer, and user powers, with strategy allow-list or target constraints."
+        },
+        {
+          "name": "maps_sui_object_cap_coin_flow",
+          "type": "qualitative",
+          "description": "Agent maps wrapper state, wrapped cap, receipt object, and any Coin/Balance flow before implementation."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Add an AdminCap-gated pause flag to a Sui Move package. The repo has Move.toml, sources/market.move, and tests/market_tests.move. Pause should block user deposits but still allow admin config reads.",
+      "expected_output": "Agent applies the base sui-move skill without needing lending/staking/vault triggers, inspects Move.toml/sources/tests, maps Sui objects/capabilities/ownership, plans a composable Move 2024 change, asks for code gate, and runs sui move build/test if implementing.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "loads_base_sui_move_context",
+          "type": "qualitative",
+          "description": "Agent recognizes Sui from Move.toml/sources/AdminCap and applies base Sui Move guidance."
+        },
+        {
+          "name": "inspects_sui_package_structure",
+          "type": "qualitative",
+          "description": "Agent inspects Move.toml, sources, and tests before planning or coding."
+        },
+        {
+          "name": "maps_sui_object_capability_flow",
+          "type": "qualitative",
+          "description": "Plan identifies the market object/state, AdminCap authorization path, and which user entry points are blocked by pause."
+        },
+        {
+          "name": "uses_move_2024_and_tests",
+          "type": "qualitative",
+          "description": "Plan/test guidance follows Move 2024 and Sui test conventions, including capability success/failure tests."
+        }
+      ]
     }
   ]
 }
