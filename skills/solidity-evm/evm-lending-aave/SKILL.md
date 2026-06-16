@@ -1,5 +1,5 @@
 ---
-name: lending-aave
+name: evm-lending-aave
 description: Use when planning or implementing Aave-style lending systems in Solidity, including Hardhat setup, reserve-first architecture, Pool and PoolConfigurator design, aToken and debt-token accounting, oracle and interest-rate strategy design, liquidation, admin controls, and evaluation of skill effectiveness.
 ---
 
@@ -10,21 +10,21 @@ Use this skill as the package overview when the task is to fork, reproduce, or a
 This package is split into focused skills:
 
 - For Hardhat and OpenZeppelin project scaffolding:
-  Read [skills/foundation/set-up-project/SKILL.md](skills/foundation/set-up-project/SKILL.md)
+  Read [references/project-setup.md](references/project-setup.md)
 - For high-level fork planning and Aave-style reserve-first architecture:
-  Read [skills/core/aave-lending-architecture/SKILL.md](skills/core/aave-lending-architecture/SKILL.md)
+  Read [references/architecture.md](references/architecture.md)
 - For the user-facing `Pool` contract and reserve operations:
-  Read [skills/core/aave-pool/SKILL.md](skills/core/aave-pool/SKILL.md)
+  Read [references/pool.md](references/pool.md)
 - For reserve configuration and admin update boundaries:
-  Read [skills/core/aave-configurator/SKILL.md](skills/core/aave-configurator/SKILL.md)
+  Read [references/configurator.md](references/configurator.md)
 - For `aToken` and debt-token accounting:
-  Read [skills/core/aave-tokens/SKILL.md](skills/core/aave-tokens/SKILL.md)
+  Read [references/tokens.md](references/tokens.md)
 - For oracle-backed account data and reserve risk policy:
-  Read [skills/core/aave-oracle-and-risk/SKILL.md](skills/core/aave-oracle-and-risk/SKILL.md)
+  Read [references/oracle-and-risk.md](references/oracle-and-risk.md)
 - For interest accrual and reserve-specific rate strategy:
-  Read [skills/core/aave-interest-rate-strategy/SKILL.md](skills/core/aave-interest-rate-strategy/SKILL.md)
+  Read [references/interest-rate-strategy.md](references/interest-rate-strategy.md)
 - For liquidation flow and unhealthy-account handling:
-  Read [skills/core/aave-liquidation/SKILL.md](skills/core/aave-liquidation/SKILL.md)
+  Read [references/liquidation.md](references/liquidation.md)
 
 Use this top-level overview when the request is broad and you need to decide whether the work is mainly:
 

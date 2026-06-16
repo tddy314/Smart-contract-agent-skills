@@ -1,8 +1,3 @@
----
-name: aave-configurator
-description: Use when implementing or reviewing Aave-style PoolConfigurator logic, including reserve activation, pause and freeze flags, collateral settings, reserve-factor updates, caps, and admin-controlled risk configuration.
----
-
 # Aave Configurator
 
 Use this skill when the task is about reserve configuration, risk-parameter updates, and admin-controlled protocol boundaries.
@@ -30,6 +25,6 @@ Keep hot user execution paths out of the configurator.
 ## Read Next
 
 - For overall Aave fork shape:
-  Read [aave-lending-architecture/SKILL.md](aave-lending-architecture/SKILL.md)
+  Read [architecture.md](architecture.md)
 - For account-data consequences of config changes:
-  Read [../aave-oracle-and-risk/SKILL.md](../aave-oracle-and-risk/SKILL.md)
+  Read [oracle-and-risk.md](oracle-and-risk.md)

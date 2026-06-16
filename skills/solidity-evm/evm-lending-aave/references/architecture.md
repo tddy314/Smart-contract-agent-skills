@@ -1,8 +1,3 @@
----
-name: aave-lending-architecture
-description: Use when designing or implementing Aave-style lending systems in Solidity, including reserve-first Pool architecture, PoolConfigurator boundaries, aToken and variable debt token accounting, oracle and interest-rate strategy design, collateral and health-factor checks, liquidation, admin controls, and invariant-driven testing.
----
-
 # Aave Lending Architecture
 
 Use this skill before writing Aave-style lending contracts or materially changing reserve accounting, token accounting, oracle pricing, interest accrual, liquidation, admin controls, or user account data logic.
@@ -119,39 +114,39 @@ Keep `SKILL.md` as the overview. Read the detailed `references/` files for archi
 - For fork planning, version selection, and overall system shape:
   Stay in this file first.
 - For the user-facing `Pool`, reserve operations, and account-data entrypoints:
-  Read [../aave-pool/SKILL.md](../aave-pool/SKILL.md)
+  Read [pool.md](pool.md)
 - For reserve configuration and admin boundaries:
-  Read [../aave-configurator/SKILL.md](../aave-configurator/SKILL.md)
+  Read [configurator.md](configurator.md)
 - For `aToken` and debt-token accounting:
-  Read [../aave-tokens/SKILL.md](../aave-tokens/SKILL.md)
+  Read [tokens.md](tokens.md)
 - For oracle-backed risk and account-data policy:
-  Read [../aave-oracle-and-risk/SKILL.md](../aave-oracle-and-risk/SKILL.md)
+  Read [oracle-and-risk.md](oracle-and-risk.md)
 - For interest accrual and reserve-specific rate strategy:
-  Read [../aave-interest-rate-strategy/SKILL.md](../aave-interest-rate-strategy/SKILL.md)
+  Read [interest-rate-strategy.md](interest-rate-strategy.md)
 - For liquidation implementation:
-  Read [../aave-liquidation/SKILL.md](../aave-liquidation/SKILL.md)
+  Read [liquidation.md](liquidation.md)
 
 - For Pool, Configurator, reserve state, and token boundaries:
-  See [references/pool-and-tokens.md](references/pool-and-tokens.md)
+  See [architecture-pool-and-tokens.md](architecture-pool-and-tokens.md)
   For implementation checks on the same area:
-  See [rules/pool-and-token-rules.md](rules/pool-and-token-rules.md)
+  See [architecture-pool-and-token-rules.md](architecture-pool-and-token-rules.md)
 - For reserve config, collateral policy, and health-factor math:
-  See [references/reserve-config-and-risk.md](references/reserve-config-and-risk.md)
+  See [architecture-reserve-config-and-risk.md](architecture-reserve-config-and-risk.md)
   For implementation checks on the same area:
-  See [rules/risk-rules.md](rules/risk-rules.md)
+  See [architecture-risk-rules.md](architecture-risk-rules.md)
 - For interest accrual, rate strategy, and oracle policy:
-  See [references/interest-and-oracle.md](references/interest-and-oracle.md)
+  See [architecture-interest-and-oracle.md](architecture-interest-and-oracle.md)
   For implementation checks on the same area:
-  See [rules/interest-and-oracle-rules.md](rules/interest-and-oracle-rules.md)
+  See [architecture-interest-and-oracle-rules.md](architecture-interest-and-oracle-rules.md)
 - For supply, withdraw, borrow, repay, and liquidation flows:
-  See [references/liquidation-and-flows.md](references/liquidation-and-flows.md)
+  See [architecture-liquidation-and-flows.md](architecture-liquidation-and-flows.md)
   For implementation checks on the same area:
-  See [rules/flow-and-liquidation-rules.md](rules/flow-and-liquidation-rules.md)
+  See [architecture-flow-and-liquidation-rules.md](architecture-flow-and-liquidation-rules.md)
 - For invariants, contract tests, and A/B skill-vs-no-skill evaluation:
-  See [references/security-and-testing.md](references/security-and-testing.md)
-  See [references/skill-evaluation.md](references/skill-evaluation.md)
+  See [architecture-security-and-testing.md](architecture-security-and-testing.md)
+  See [architecture-skill-evaluation.md](architecture-skill-evaluation.md)
   For system-wide implementation security checks:
-  See [rules/security-checks.md](rules/security-checks.md)
+  See [architecture-security-checks.md](architecture-security-checks.md)
 
 ## Contract Layout
 

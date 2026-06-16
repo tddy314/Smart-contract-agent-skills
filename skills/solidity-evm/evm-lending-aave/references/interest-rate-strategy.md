@@ -1,8 +1,3 @@
----
-name: aave-interest-rate-strategy
-description: Use when implementing or reviewing Aave-style reserve-specific interest accrual, index updates, utilization logic, and DefaultReserveInterestRateStrategy behavior for supplier and borrower accounting.
----
-
 # Aave Interest Rate Strategy
 
 Use this skill when the task is about utilization, borrow rate strategy, liquidity rate, reserve indexes, or reserve-factor handling.
@@ -29,6 +24,6 @@ This module should define:
 ## Read Next
 
 - For debt and claim token accounting:
-  Read [../aave-tokens/SKILL.md](../aave-tokens/SKILL.md)
+  Read [tokens.md](tokens.md)
 - For pool-level integration:
-  Read [../aave-pool/SKILL.md](../aave-pool/SKILL.md)
+  Read [pool.md](pool.md)

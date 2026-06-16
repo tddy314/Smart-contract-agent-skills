@@ -1,8 +1,3 @@
----
-name: aave-liquidation
-description: Use when implementing or reviewing Aave-style liquidation logic, including liquidation eligibility, repay limits, seized collateral math, health-factor thresholds, and unhealthy-account handling.
----
-
 # Aave Liquidation
 
 Use this skill when the task is specifically about `liquidationCall`, unhealthy-account handling, or collateral seizure logic.
@@ -29,6 +24,6 @@ Liquidation should:
 ## Read Next
 
 - For health factor and oracle policy:
-  Read [../aave-oracle-and-risk/SKILL.md](../aave-oracle-and-risk/SKILL.md)
+  Read [oracle-and-risk.md](oracle-and-risk.md)
 - For user-facing pool integration:
-  Read [../aave-pool/SKILL.md](../aave-pool/SKILL.md)
+  Read [pool.md](pool.md)

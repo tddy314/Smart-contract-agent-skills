@@ -1,8 +1,3 @@
----
-name: aave-pool
-description: Use when implementing or reviewing the Aave-style Pool contract, including supply, withdraw, borrow, repay, setUseAsCollateral, reserve-state updates, account-data checks, and user-facing reserve operations.
----
-
 # Aave Pool
 
 Use this skill when the task is specifically about the `Pool` contract or the hot user-facing execution path.
@@ -36,10 +31,10 @@ The `Pool` should not:
 ## Read Next
 
 - For reserve config and admin boundaries:
-  Read [../aave-configurator/SKILL.md](../aave-configurator/SKILL.md)
+  Read [configurator.md](configurator.md)
 - For token accounting:
-  Read [../aave-tokens/SKILL.md](../aave-tokens/SKILL.md)
+  Read [tokens.md](tokens.md)
 - For risk and oracle checks:
-  Read [../aave-oracle-and-risk/SKILL.md](../aave-oracle-and-risk/SKILL.md)
+  Read [oracle-and-risk.md](oracle-and-risk.md)
 - For liquidation behavior:
-  Read [../aave-liquidation/SKILL.md](../aave-liquidation/SKILL.md)
+  Read [liquidation.md](liquidation.md)

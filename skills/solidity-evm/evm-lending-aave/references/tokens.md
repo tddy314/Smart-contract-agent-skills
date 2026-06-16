@@ -1,8 +1,3 @@
----
-name: aave-tokens
-description: Use when implementing or reviewing Aave-style token accounting, including aToken mint and burn behavior, variable debt token accounting, index-based balance growth, and reserve-backed supplier or borrower claims.
----
-
 # Aave Tokens
 
 Use this skill when the task is specifically about `aToken`, `VariableDebtToken`, or reserve-backed share and debt accounting.
@@ -35,6 +30,6 @@ Prefer variable debt only unless stable debt is explicitly required.
 ## Read Next
 
 - For reserve state and pool operations:
-  Read [../aave-pool/SKILL.md](../aave-pool/SKILL.md)
+  Read [pool.md](pool.md)
 - For interest accrual:
-  Read [../aave-interest-rate-strategy/SKILL.md](../aave-interest-rate-strategy/SKILL.md)
+  Read [interest-rate-strategy.md](interest-rate-strategy.md)
