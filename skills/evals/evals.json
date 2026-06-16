@@ -1,0 +1,104 @@
+{
+  "skill_name": "smart-contract-core",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Add a withdraw function to the staking contract that lets users unstake their tokens and claim rewards. The contract is in src/Staking.sol using Foundry.",
+      "expected_output": "Agent inspects repo, starts planning interview with proposed understanding, produces design analysis, asks before coding, runs tests if present, produces condensed report.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "inspects_repo_first",
+          "type": "qualitative",
+          "description": "Agent inspects the repository before proposing any plan or writing any code. Should identify project structure, dependencies, and existing patterns."
+        },
+        {
+          "name": "starts_planning_interview",
+          "type": "qualitative",
+          "description": "Agent proposes understanding (feature, actors, permissions, state, assets) and asks user to validate. Not open-ended questions — agent proposes based on inspection."
+        },
+        {
+          "name": "produces_design_analysis",
+          "type": "qualitative",
+          "description": "Agent produces a design analysis with components, flow, properties, possible outcomes, and open questions. Neutral framing, not threat-hunting."
+        },
+        {
+          "name": "asks_code_gate",
+          "type": "qualitative",
+          "description": "Agent asks 'Ready to implement?' or equivalent explicit confirmation before writing code."
+        },
+        {
+          "name": "produces_condensed_report",
+          "type": "qualitative",
+          "description": "Agent produces a final condensed report with: Summary, Files changed, Tests run, Assumptions, Security considerations, Remaining risks, Human review focus."
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "There's a bug in the reward calculation — users are getting double rewards when they stake and unstake in the same block. Can you fix it? The contract is in contracts/reward.move using Sui Move.",
+      "expected_output": "Agent inspects repo, asks about expected behavior before assuming the fix, analyzes the logic neutrally (not manufacturing extra bugs), runs existing tests if present, produces condensed report.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "inspects_repo_first",
+          "type": "qualitative",
+          "description": "Agent inspects the repository and traces the code before proposing a fix."
+        },
+        {
+          "name": "asks_about_expected_behavior",
+          "type": "qualitative",
+          "description": "Agent asks about the expected behavior before jumping to a fix, especially for a bug report."
+        },
+        {
+          "name": "produces_design_analysis",
+          "type": "qualitative",
+          "description": "Agent produces a design analysis of the fix — what changes, what stays the same, possible outcomes."
+        },
+        {
+          "name": "asks_code_gate",
+          "type": "qualitative",
+          "description": "Agent asks for confirmation before writing code."
+        },
+        {
+          "name": "produces_condensed_report",
+          "type": "qualitative",
+          "description": "Agent produces a final condensed report."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I want to build a simple escrow contract in Solidity. One party deposits, the other releases or disputes. Help me design and implement it.",
+      "expected_output": "Agent handles new repo path (notes fresh project), asks about dispute resolution, timeouts, roles, produces design analysis without existing code, asks before coding, produces condensed report.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "handles_new_repo_path",
+          "type": "qualitative",
+          "description": "Agent recognizes it's a new project and asks about intended chain/framework if not clear."
+        },
+        {
+          "name": "asks_about_design_decisions",
+          "type": "qualitative",
+          "description": "Agent asks about key design decisions: dispute mechanism, timeout, arbiter role, etc."
+        },
+        {
+          "name": "produces_design_analysis",
+          "type": "qualitative",
+          "description": "Agent produces a design analysis with components, flow, properties, possible outcomes."
+        },
+        {
+          "name": "asks_code_gate",
+          "type": "qualitative",
+          "description": "Agent asks for confirmation before writing code."
+        },
+        {
+          "name": "produces_condensed_report",
+          "type": "qualitative",
+          "description": "Agent produces a final condensed report."
+        }
+      ]
+    }
+  ]
+}
