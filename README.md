@@ -55,7 +55,9 @@ The intended pattern:
    - Sui Move → `sui/sui-move` (always), plus a `sui-*-*` domain skill
 4. **`smart-contract-testing`** is loaded whenever behavior, permissions, or
    state transitions change.
-5. **`pr-workflow`** runs at the end, when packaging the work for a human reviewer.
+5. **`pre-audit-handoffs`** is loaded when preparing a project for internal
+   pre-audit review or external auditor handoff.
+6. **`pr-workflow`** runs at the end, when packaging the work for a human reviewer.
 
 ## Shared workflow skills
 
@@ -65,6 +67,7 @@ The intended pattern:
 | [`pre-coding-plan`](skills/pre-coding-plan/SKILL.md) | Interactive interview. Agent proposes understanding, user validates before any code. |
 | [`threat-model`](skills/threat-model/SKILL.md) | Neutral design analysis followed by a chain-specific risk pass (EVM and Sui checklists). |
 | [`smart-contract-testing`](skills/smart-contract-testing/SKILL.md) | Pushes past happy-path tests — invariants, failure paths, framework edge cases. |
+| [`pre-audit-handoffs`](skills/pre-audit-handoffs/SKILL.md) | Self-audit, finding classification, test gaps, and reviewer-ready audit handoff. |
 | [`pr-workflow`](skills/pr-workflow/SKILL.md) | Conventional commit titles, focused change summaries, reviewer-facing handoff. |
 | [`evals`](skills/evals/evals.json) | Eval prompts and assertions used to test the skills. |
 
