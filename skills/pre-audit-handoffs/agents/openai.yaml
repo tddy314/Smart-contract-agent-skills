@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pre-Audit Handoffs"
+  short_description: "Prepare smart contract code for audit handoff."
+  default_prompt: "Prepare this smart contract project for audit by self-auditing for bugs, identifying test gaps, and writing a reviewer-ready handoff."
